@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/registrations.css' %}">
+    <script src="{% static 'JS/jquery.min.js' %}"></script>
+    <script src="{% static 'JS/TweenMax.min.js' %}"></script>
+    <script src="{% static 'JS/vivus.min.js' %}"></script>
+    <meta charset="UTF-8">
+    <title>FlemFare</title>
+   <style>
+        .color-mix {
+            font-size: 24px;
+            font-weight: bold;
+            background: linear-gradient(to right, #ff1493 50%, #FFD800 50%);
+            -webkit-background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+
+        .error-message {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #ff4d4d; /* Adjust the background color as needed */
+            color: white;
+            text-align: center;
+            padding: 10px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+  <div >
+
+  </div>
+  {% if form.errors %}
+{% for field in form %}
+{% for error in field.errors %}
+<div style="height: 4vh; background-color: whitesmoke; color: #ff4d4d; text-align: center; font-size: x-large;">
+<strong>{{ error|escape }}</strong>
+</div>
+{% endfor %}
+{% endfor %}
+{% for error in form.non_field_errors %}
+<div style="height: 4vh; background-color: whitesmoke; color: #ff4d4d; text-align: center; font-size: x-large;">
+<strong>{{ error|escape }}</strong>
+</div>
+{% endfor %}
+{% endif %}
+{% if errors %}
+<div style="height: 4vh; background-color: whitesmoke; color: #ff4d4d; text-align: center; font-size: x-large;">
+  <strong>{{ errors }}</strong>
+  </div>
+{% endif %}
+
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 width="1280px" height="800px" viewBox="0 0 1280 800" enable-background="new 0 0 1280 800" xml:space="preserve" id="message">
+  </path>
+</svg>
+
+<div class="container" style="margin-left:300px;margin-top:0px;" >
+  <div class="welcome">
+    <div class="pinkbox">
+      <div class="signup nodisplay">
+        <h1 class="dol">register</h1>
+        <form autocomplete="new-password" action="{% url 'registerf' %}" method="post">
+          {% csrf_token %}
+          <input type="text" name="username" placeholder="Email" style="color:black;">
+          <input type="password" name="password1" placeholder="Password" style="color:black;"  autocomplete="new-password" readonly onfocus="this.removeAttribute('readonly');">
+          <input type="password" name="password2" placeholder="Confirm-Password" style="color:black;"  autocomplete="new-password" readonly onfocus="this.removeAttribute('readonly');">
+          <button class="button submit" >create account </button>
+        </form>
+      </div>
+
+      <div class="signin">
+        <h1 class="dol">sign in</h1>
+        <form class="more-padding" autocomplete="new-password" action="{% url 'loginf' %}" method="post">
+          {% csrf_token %}
+          <input type="text" name='username' placeholder="Email" style="color:black;">
+          <input type="password" name='password' placeholder="Password" style="color:black;"  autocomplete="new-password" readonly onfocus="this.removeAttribute('readonly');">
+          <button class="button submit">login</button>
+        </form>
+      </div>
+    </div>
+
+
+    <div class="leftbox">
+      <h2 class="title" style="color:#FFD800;"><span style="color:#ff1493;">FEM</span>FLARE</h2>
+      <p class="desc" style="color:purple;font-size:12.6px;">Embrace the Blooms of  <span style="color:#ff1493;">Femininity</span></p>
+      <img class="flower" src="{%static 'images/logos/flem3.png' %}" alt="image" border="0">
+      <br>
+      <p class="account" style="color:purple;font-size:13px;">have an account?</p>
+      <button class="button" style="color:#ff1493;" id="signin">login</button>
+    </div>
+
+    <div class="rightbox">
+      <h2 class="title" style="color:#FFD800;"><span style="color:#ff1493;">FEM</span>FLARE</h2>
+      <p class="desc" style="color:purple;font-size:12.6px;">Embrace the Blooms of  <span style="color:#ff1493;">Femininity</span></p>
+      <img class="flower" src="{%static 'images/logos/flem3.png' %}" />
+      <br>
+      <p class="account" style="color:purple;font-size:13px;">don't have an account?</p>
+      <button class="button" style="color:#ff1493;" id="signup">sign up</button>
+    </div>
+  </div>
+ </div>
+
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vivus@0.4.5/dist/vivus.min.js"></script>
+<script type="text/javascript">
+
+
+  $(function() {
+    TweenMax.to("body", 20, {backgroundPositionY: -100, repeat: -1, ease: Power0.easeNone});
+  })
+
+  $('#signup').click(function() {
+    $('.pinkbox').css('transform', 'translateX(80%)');
+    $('.signin').addClass('nodisplay');
+    $('.signup').removeClass('nodisplay');
+    $('form').attr('action', '{% url "registerf" %}');
+  });
+  $('#signin').click(function() {
+    $('.pinkbox').css('transform', 'translateX(0%)');
+    $('.signup').addClass('nodisplay');
+    $('.signin').removeClass('nodisplay');
+    $('form').attr('action', '/login');
+  });
+</script>
+</body>
+</html>
