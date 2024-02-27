@@ -4,11 +4,27 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 # Create your views here.
+@login_required(login_url='loginf')
 def home(request):
     return render(request,'home.html')
 
 def registerf(request):
-    return render(request,'registrations.html')
+    print("in regf ")
+    if request.method == 'POST':
+        print("in post ")
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            print("in validation ")
+            form.save()
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password1')
+            user = authenticate(username=username,password=password)
+            login(request, user)
+            return redirect('home')
+        else:
+            print(form.errors)
+            return render(request, "registrations.html", {"form": form})
+    return render(request, "registrations.html")
 
 def loginf(request):
     if request.method == 'POST':
