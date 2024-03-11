@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="icon" type="image/png" href="/static/images/logo.png">
+    <style>
+        .hero {
+            background-image: url('/static/images/banner2.png');
+            background-size: cover;
+            background-position: center;
+            height: 85vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            font-size: 2rem;
+            background-color: pink;
+        }
+
+        @media (max-width: 475px) {
+            .hero {
+                height: 80vh;
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                height: 50vh;
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero {
+                height: 20vh;
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 840px) {
+            .hero {
+                height: 20vh;
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 1040px) {
+            .hero {
+                height: 20vh;
+                font-size: 1.2rem;
+            }
+        }
+
+        .fest-title {
+            font-family: 'Roboto', sans-serif;
+            /* Applying Roboto font from Google Fonts API */
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="preloader"></div>
+
+    {% include 'navbar.html' %}
+
+    <div class="hero">
+    </div>
+
+    <div class="bg-gradient-to-r from-pink-200 to-purple-200 w-screen mx-auto py-8" id="#about">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+            <!-- Text Content -->
+            <div class="md:w-1/2 md:pr-8 lg:pr-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 mx-10"
+                    style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: #ee074d;">
+                    About Us</h2>
+                <p class="text-gray-700 leading-relaxed mb-4 mx-10 text-justify">Women is crucial for several reasons.
+                    Firstly, such events provide a platform for women and girls to come together, share their
+                    experiences, and build a sense of solidarity and community. They offer opportunities for networking,
+                    mentorship, and skill-building, empowering participants to pursue their goals and aspirations.<br>
+                    <br>The Women Development Cell (WDC) at KLEF promotes gender equality through education, advocacy,
+                    and skill-building initiatives. Our mission includes creating a safe environment for women to
+                    thrive, offering awareness programs on women's rights, and conducting gender sensitization
+                    activities on campus. We strive to address gender discrimination, prevent sexual harassment, and
+                    ensure equitable opportunities for all genders within the university community.
+                </p>
+            </div> <!-- Image -->
+            <div class="md:w-1/2 mt-3 md:mt-0">
+
+                <img src="/static/images/kanchana3.jpg" alt="About Image" class="w-full h-auto rounded-lg">
+            </div>
+        </div>
+    </div>
+    </p><img style="display: block;
+        margin-left: auto;
+        margin-right: auto;
+        " src="/static/images/KL Ranks.png">
+
+    <!-- component -->
+    <section class="bg-gradient-to-r from-pink-200 to-purple-200 px-auto py-7 px-1 md:px-7 lg:px-16 w-screen">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center"
+            style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: #ee074d;">Tracks
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 place-items-center">
+            <div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mb-4"
+                style="max-width: 360px;">
+                <a href="#">
+                    <img class="rounded-t-lg" src="/static/images/women-leadership.jpg"
+                        alt="Empowerment and Next Generation Leadership" />
+                </a>
+                <div class="p-5">
+                    <a href="#">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Empowerment and
+                            Next Generation Leadership</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Cultivating leadership for the future,
+                        empowering women for impactful change.</p>
+                    <a href="#"
+                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        Register
+                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 5h12m0 0L9 1m4 4L9 9" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mb-4"
+                style="max-width: 360px;">
+                <a href="#">
+                    <img class="rounded-t-lg" src="/static/images/Entrepreneurship.jpg" alt="" />
+                </a>
+                <div class="p-5">
+                    <a href="#">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                            Entrepreneurship and Business. </h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Igniting female entrepreneurship,
+                        fueling business growth and success.</p>
+                    <a href="#"
+                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        Register
+                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 5h12m0 0L9 1m4 4L9 9" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mb-4"
+                style="max-width: 360px;">
+                <a href="#">
+                    <img class="rounded-t-lg" src="/static/images/skill_development.jpg" alt="" />
+                </a>
+                <div class="p-5">
+                    <a href="#">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Education
+                            and Skill Development.</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Empowering through education,
+                        equipping with vital skills for advancement.</p>
+                    <a href="#"
+                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        Register
+                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 5h12m0 0L9 1m4 4L9 9" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <!-- Repeat for other cards -->
+        </div>
+    </section>
+
+    <!-- Second set of cards -->
+    <section class="bg-gradient-to-r from-pink-200 to-purple-200 px-auto py-7 px-1 md:px-7 lg:px-16 w-screen">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 place-items-center">
+            <div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mb-4"
+                style="max-width: 360px;">
+                <a href="#">
+                    <img class="rounded-t-lg" src="/static/images/innovation..png" alt="Innovation and Technology" />
+                </a>
+                <div class="p-5">
+                    <a href="#">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Innovation and
+                            Technology</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Leveraging tech to propel women's
+                        roles, innovation, and opportunities.</p>
+                    <a href="#"
+                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        Register
+                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 5h12m0 0L9 1m4 4L9 9" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mb-4"
+                style="max-width: 360px;">
+                <a href="#">
+                    <img class="rounded-t-lg" src="/static/images/Genderequality.jpg" alt="" />
+                </a>
+                <div class="p-5">
+                    <a href="#">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"> Gender
+                            Equality and Inclusion.</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Championing equity, dismantling
+                        barriers, promoting inclusivity across genders.</p>
+                    <a href="#"
+                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        Register
+                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 5h12m0 0L9 1m4 4L9 9" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mb-4"
+                style="max-width: 360px;">
+                <a href="#">
+                    <img class="rounded-t-lg" src="/static/images/health_and_wellbeing.jpg" alt="" />
+                </a>
+                <div class="p-5">
+                    <a href="#">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Health and
+                            Well-being.</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Prioritizing women's health, nurturing
+                        mental wellness, and overall thriving.</p>
+                    <a href="#"
+                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        Register
+                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 5h12m0 0L9 1m4 4L9 9" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <!-- Repeat for other cards -->
+        </div>
+    </section>
+
+    <!-- Third set of cards -->
+    <section class="bg-gradient-to-r from-pink-200 to-purple-200 px-auto py-7 px-1 md:px-7 lg:px-16 w-screen">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 place-items-center">
+            <div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mb-4"
+                style="max-width: 360px;">
+                <a href="#">
+                    <img class="rounded-t-lg" src="/static/images/socialjustice.png"
+                        alt="Human Rights and Social Justice" />
+                </a>
+                <div class="p-5">
+                    <a href="#">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Human Rights
+                            and Social Justice</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Advocating equality, justice, and
+                        women's rights globally.</p>
+                    <a href="#"
+                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        Register
+                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 5h12m0 0L9 1m4 4L9 9" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+
+            <!-- Repeat for other cards -->
+        </div>
+    </section>
+
+
+    </div>
+
+    <section>
+        <section>
+            <div class="bg-gradient-to-r from-pink-200 to-purple-200 w-screen mx-auto py-8 px-4 md:px-8 lg:px-16">
+                <div class="container mx-auto flex flex-col items-start md:flex-row my-12 md:my-24">
+                    <div class="flex flex-col w-full sticky md:top-36 lg:w-1/3 mt-2 md:mt-12 px-8">
+                        <p class="fest-title text-3xl md:text-4xl leading-normal md:leading-relaxed mb-2">Working
+                            Process of Women Summit</p>
+
+                        <p class="text-sm md:text-base text-purple-900 mb-4">
+                            <!-- Changed text-purple-600 to text-purple-900 -->
+                            This is the tentitive schedule for the whole two days events
+                        </p>
+                        <a href="#"
+                            class="bg-transparent mr-auto hover:bg-#731678 text-#731678 hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-#731678 hover:border-transparent">Explore
+                            Now</a>
+                    </div>
+                    <div class="ml-0 md:ml-12 lg:w-2/3 sticky">
+                        <div class="container mx-auto w-full h-full">
+                            <div class="relative wrap overflow-hidden p-10 h-full">
+                                <div class="border-2-2 border-#731678 absolute h-full border"
+                                    style="right: 50%; border: 2px solid #731678; border-radius: 1%;"></div>
+                                <div class="border-2-2 border-#731678 absolute h-full border"
+                                    style="left: 50%; border: 2px solid #731678; border-radius: 1%;"></div>
+                                <div
+                                    class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                                    <div class="order-1 w-5/12"></div>
+                                    <div class="order-1 w-5/12 px-1 py-4 text-right">
+                                        <h4 class="mb-3 font-bold text-lg md:text-2xl">Inauguration</h4>
+                                        <p class="text-sm md:text-base leading-snug text-purple-900 text-opacity-100">
+                                            Official launch of the event celebrating women's achievements. </p>
+                                    </div>
+                                </div>
+                                <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                                    <div class="order-1 w-5/12"></div>
+                                    <div class="order-1 w-5/12 px-1 py-4 text-left">
+                                        <h4 class="mb-3 font-bold text-lg md:text-2xl">Keynote Addressing</h4>
+                                        <p class="text-sm md:text-base leading-snug text-purple-900 text-opacity-100">
+                                            Elevating Women: Empowerment, Equality, and Excellence—Keynote Addressing at
+                                            Women's Summit.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                                    <div class="order-1 w-5/12"></div>
+                                    <div class="order-1 w-5/12 px-1 py-4 text-right">
+                                        <h4 class="mb-3 font-bold text-lg md:text-2xl">Panel Discussions in Women Summit
+                                        </h4>
+                                        <p class="text-sm md:text-base leading-snug text-purple-900 text-opacity-100">
+                                            Engaging talks on women's issues, empowerment, and leadership on the given
+                                            tracks.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                                    <div class="order-1 w-5/12"></div>
+                                    <div class="order-1 w-5/12 px-1 py-4">
+                                        <h4 class="mb-3 font-bold text-lg md:text-2xl text-left">Workshops</h4>
+                                        <p class="text-sm md:text-base leading-snug text-purple-900 text-opacity-100">
+                                            <!-- Changed text-purple-600 to text-purple-900 -->
+                                            Participate in the wonderful workshops and get insights from brilliant minds
+                                        </p>
+                                    </div>
+
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
+                        <img class="mx-auto -mt-36 md:-mt-36"
+                            src="https://user-images.githubusercontent.com/54521023/116968861-ef21a000-acd2-11eb-95ac-a34b5b490265.png" />
+
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            </div>
+            </div>
+
+
+        </section>
+
+
+        <script>
+            document.getElementById('menu-toggle').addEventListener('click', function () {
+                var navbar = document.getElementById('navbar-default');
+                navbar.classList.toggle('hidden');
+                navbar.classList.toggle('block');
+            });
+            window.addEventListener('load', function () {
+                console.log("Page loaded"); // Check if this message appears in the browser's console
+                var preloader = document.querySelector('.preloader');
+                setTimeout(function () {
+                    preloader.style.display = 'none'; // Hide the preloader
+                }, 1000); // Set the timeout to 1000 milliseconds (1 second)
+            });
+
+
+        </script>
+
+</body>
+
+</html>

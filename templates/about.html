@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="icon" type="image/png" href="/static/images/logo.png">
+    <style>
+        .hero {
+            background-image: url('/static/images/banner.png');
+            background-size: cover;
+            background-position: center;
+            height: 85vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            font-size: 2rem;
+            background-color: pink;
+        }
+
+        @media (max-width: 475px) {
+            .hero {
+                height: 80vh;
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                height: 50vh;
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero {
+                height: 20vh;
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 840px) {
+            .hero {
+                height: 20vh;
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 1040px) {
+            .hero {
+                height: 20vh;
+                font-size: 1.2rem;
+            }
+        }
+
+        .fest-title {
+            font-family: 'Roboto', sans-serif;
+            /* Applying Roboto font from Google Fonts API */
+        }
+
+        /* Preloader Styles */
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            /* Change background color as needed */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            /* Ensure it's on top of other content */
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            /* Light grey */
+            border-top: 4px solid #3498db;
+            /* Blue */
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Hide content while preloader is visible */
+        .content {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="preloader"></div>
+
+    {% include 'navbar.html' %}
+
+
+    <div class="bg-gradient-to-r from-pink-200 to-purple-200 w-screen min-h-screen h-full mx-auto py-8 px-4 md:px-8 lg:px-16"
+        id="#about">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+            <!-- Text Content -->
+            <div class="md:w-1/2 md:pr-8 lg:pr-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4"
+                    style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: #ee074d;">
+                    About Us</h2>
+                <p class="text-gray-700 leading-relaxed mb-4 text-justify"></p>Organizing women summit is crucial for
+                several reasons. Firstly, such events provide a platform for women and girls to come together, share
+                their experiences, and build a sense of solidarity and community. They offer opportunities for
+                networking, mentorship, and skill-building, empowering participants to pursue their goals and
+                aspirations. Secondly, women summit raise awareness about issues affecting women and girls, including
+                gender inequality, discrimination, and violence.<br><br> Through workshops, discussions, and
+                performances, these events educate attendees and inspire them to take action towards positive change.
+                Additionally, women summit celebrate the achievements and talents of women and girls, promoting their
+                visibility and recognition in society. By organizing these summits, we create inclusive spaces where
+                women and girls feel valued, supported, and empowered to realize their full potential</p>
+            </div> <!-- Image -->
+            <div class="md:w-1/2 mt-3 md:mt-0">
+
+                <img src="/static/images/kanchana3.jpg" alt="About Image" class="w-full h-auto rounded-lg">
+            </div>
+        </div>
+        <br>
+        <div>
+            <p>The Women Development Cell (WDC) at KLEF promotes gender equality through education, advocacy, and
+                skill-building initiatives. Our mission includes creating a safe environment for women to thrive,
+                offering awareness programs on women's rights, and conducting gender sensitization activities on campus.
+                We strive to address gender discrimination, prevent sexual harassment, and ensure equitable
+                opportunities for all genders within the university community.
+            </p><img style="display: block;
+             margin-left: auto;
+             margin-right: auto;
+             width: 50%;" src="/static/images/KL Ranks.png">
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            var navbar = document.getElementById('navbar-default');
+            navbar.classList.toggle('hidden');
+            navbar.classList.toggle('block');
+        });
+        // Wait for the page to load
+
+        window.addEventListener('load', function () {
+            console.log("Page loaded"); // Check if this message appears in the browser's console
+            var preloader = document.querySelector('.preloader');
+            setTimeout(function () {
+                preloader.style.display = 'none'; // Hide the preloader
+            }, 1000); // Set the timeout to 1000 milliseconds (1 second)
+        });
+
+
+    </script>
+
+</body>
+
+</html>
