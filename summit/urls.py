@@ -9,6 +9,7 @@ urlpatterns = [
     path("register", registerf, name="registerf"),
     path("login", loginf, name="loginf"),
     path("profile", profile, name="profile"),
+    path("download/profile", download_csv, name="downloadcsv"),
     path("profile/edit", editprofile, name="editprofile"),
     path("logout", logoutf, name="logoutf"),
 ]

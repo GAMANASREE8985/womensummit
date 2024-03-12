@@ -4,6 +4,8 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from .models import Profile
+from django.http import HttpResponse
+import csv
 # Create your views here.
 # @login_required(login_url='loginf')
 def home(request):
@@ -83,3 +85,20 @@ def editprofile(request):
         profile.save()
         message = 'Changes saved successfully!'
     return render(request,'editprofile.html', {'profile':profile, 'message':message})
+
+def download_csv(request):
+    if request.user.is_superuser:
+        profiles = Profile.objects.all()
+
+        # Set up CSV response
+        response = HttpResponse(content_type='text/csv')
+        response['Content-Disposition'] = 'attachment; filename="profiles.csv"'
+
+        writer = csv.writer(response)
+        writer.writerow(['Username', 'ID number', 'Collage', 'Phone no', 'Department'])  # Replace with your model field names
+
+        for profile in profiles:
+            writer.writerow([profile.user, profile.idno, profile.collage, profile.phno, profile.dept])
+
+        return response
+    return None
