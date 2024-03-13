@@ -20,6 +20,21 @@ def tracks(request):
 def gallery(request):
     return render(request,'gallery.html')
 
+def chief_patron(request):
+    return render(request,'chiefpatrons.html')
+
+def patrons_advisors(request):
+    return render(request,'patronsadvisors.html')
+
+def conveners(request):
+    return render(request,'conveners.html')
+
+def students(request):
+    return render(request,'students.html')
+
+def secretary(request):
+    return render(request, 'secretary.html')
+
 def registerf(request):
     print("in regf ")
     if request.method == 'POST':

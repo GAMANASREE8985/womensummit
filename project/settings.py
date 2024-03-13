@@ -45,6 +45,10 @@ INSTALLED_APPS = [
     'summit',
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://www.womensummit.in',
+]
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',

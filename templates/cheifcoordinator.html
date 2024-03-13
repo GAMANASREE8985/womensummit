@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chief Coordinators</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./images/logo.png">
+    <style>
+        .hero {
+            background-image: url('./images/banner.png');
+            background-size: cover;
+            background-position: center;
+            height: 85vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            font-size: 2rem;
+            background-color: pink;
+        }
+
+        @media (max-width: 475px) {
+            .hero {
+                height: 80vh;
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                height: 50vh;
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero {
+                height: 20vh;
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 840px) {
+            .hero {
+                height: 20vh;
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 1040px) {
+            .hero {
+                height: 20vh;
+                font-size: 1.2rem;
+            }
+        }
+            .fest-title {
+              font-family: 'Roboto', sans-serif; /* Applying Roboto font from Google Fonts API */
+            }
+            /* Preloader Styles */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff; /* Change background color as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it's on top of other content */
+  }
+  
+  .spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3; /* Light grey */
+    border-top: 4px solid #3498db; /* Blue */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Hide content while preloader is visible */
+  .content {
+    display: none;
+  }
+  
+          </style>
+          
+</head>
+<body >
+    <div class="preloader"></div>
+
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <div class="max-w-screen-xl flex items-center justify-between mx-auto p-4">
+        <a href="index.html" class="flex items-center space-x-2 rtl:space-x-reverse">
+            <img src="./images/logo.png" class="h-10 md:h-16" alt="femflare logo">
+        </a>
+        <button data-collapse-toggle="navbar-default" id="menu-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-7 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                <li>
+                    <a href="index.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-pink-700 md:p-0 dark:text-white md:dark:hover:text-pink-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a>
+
+                </li>
+                <li>
+                    <a href="about.html" class="block py-2 px-3 text-white bg-pink-700 rounded md:bg-transparent md:text-pink-700 md:p-0 dark:text-white md:dark:text-pink-500" aria-current="page">About</a>
+
+                </li>
+                <li>
+                    <a href="tracks.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-pink-700 md:p-0 dark:text-white md:dark:hover:text-pink-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Tracks</a>
+                </li>
+                <li>
+                    <a href="gallery.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-pink-700 md:p-0 dark:text-white md:dark:hover:text-pink-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Gallery</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+
+<!-- ====== Team Section Start -->
+<section     class="bg-gradient-to-r from-blue-200 to-pink-300 max-w-screen-xl mx-auto py-8 px-4 md:px-8 lg:px-16"
+>
+<h2 class="text-center text-3xl md:text-4xl lg:text-5xl font-bold mb-8">Cheif Coordinators</h2>
+
+<div class="overflow-x-auto">
+    <table class="table-auto border-double border-black w-full">        <thead>
+            <tr>
+                <th class="px-4 py-2 border">Designation</th>
+                <th class="px-4 py-2 border">Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="px-4 py-2 border">Advisor-Student Affairs</td>
+                <td class="px-4 py-2 border">Dr. Habibullah Khan</td>
+            </tr>
+            <tr>
+                <td class="px-4 py-2 border">Advisor-Student Affairs</td>
+                <td class="px-4 py-2 border">Dr. K R S Prasad</td>
+            </tr>
+            <tr>
+                <td class="px-4 py-2 border">Dean- Student Affairs</td>
+                <td class="px-4 py-2 border">Dr. Ch. Hanumantha Rao</td>
+            </tr>
+            <tr>
+                <td class="px-4 py-2 border">Dean – Quality</td>
+                <td class="px-4 py-2 border">Dr. K. Rama Krishna</td>
+            </tr>
+            <tr>
+                <td class="px-4 py-2 border">Dean Placements & Internships</td>
+                <td class="px-4 py-2 border">Dr. N. B. V. Prasad</td>
+            </tr>
+            <tr>
+                <td class="px-4 py-2 border">Dean F & SA</td>
+                <td class="px-4 py-2 border">Dr. V. Srikanth</td>
+            </tr>
+            <tr>
+                <td class="px-4 py-2 border">Dean Student Progression & Skill Development</td>
+                <td class="px-4 py-2 border">Dr. A. Srinath</td>
+            </tr>
+            <tr>
+                <td class="px-4 py-2 border">Dean MHS & International Relations</td>
+                <td class="px-4 py-2 border">Dr. M. Kishore Babu</td>
+            </tr>
+            <tr>
+                <td class="px-4 py-2 border">Additional Dean F & SA, Director-PS</td>
+                <td class="px-4 py-2 border">Dr. P.V. Chalapathi</td>
+            </tr>
+            <tr>
+                <td class="px-4 py-2 border">Dean P&D</td>
+                <td class="px-4 py-2 border">Dr. V. Rajesh</td>
+            </tr>
+            <tr>
+                <td class="px-4 py-2 border">Additional Dean R & D</td>
+                <td class="px-4 py-2 border">Dr. B. T. P. Madhav</td>
+            </tr>
+            <tr>
+                <td class="px-4 py-2 border">Additional Dean Academics</td>
+                <td class="px-4 py-2 border">Prf. V. Hari Kiran</td>
+            </tr>
+            <tr>
+                <td class="px-4 py-2 border">Director R & D, Life Sciences</td>
+                <td class="px-4 py-2 border">Dr .N Buchi Naidu</td>
+            </tr>
+            <tr>
+                <td class="px-4 py-2 border">Director-SAC</td>
+                <td class="px-4 py-2 border">Dr. P. Sai Vijay</td>
+            </tr>
+            <tr>
+                <td class="px-4 py-2 border">Special Officer</td>
+                <td class="px-4 py-2 border">Dr. A. Vani</td>
+            </tr>
+            <tr>
+                <td class="px-4 py-2 border">Director, Alumni Relations</td>
+                <td class="px-4 py-2 border">Dr. K. Ch Sri Kavya</td>
+            </tr>
+            <tr>
+                <td class="px-4 py-2 border">Director, Agriculture</td>
+                <td class="px-4 py-2 border">Dr. P. Ratna Prasad</td>
+            </tr>
+            <tr>
+                <td class="px-4 py-2 border">Director, CIIE</td>
+                <td class="px-4 py-2 border">Dr. K. Narasimha Raju</td>
+            </tr>
+            <tr>
+                <td class="px-4 py-2 border">Director, Placements</td>
+                <td class="px-4 py-2 border">Dr. M. Venkatanarayana</td>
+            </tr>
+            <tr>
+                <td class="px-4 py-2 border">CEO, TIF</td>
+                <td class="px-4 py-2 border">Mr. Alok Govil</td>
+            </tr>
+            <tr>
+                <td class="px-4 py-2 border">Professor, CSE</td>
+                <td class="px-4 py-2 border">Dr. K. Raghava Rao</td>
+            </tr>
+            <tr>
+                <td class="px-4 py-2 border">Principal College of Engineering</td>
+                <td class="px-4 py-2 border">Dr. T. K. Rama Krishna Rao</td>
+            </tr>
+            <tr>
+                <td class="px-4 py-2 border">Principal College of Sciences</td>
+                <td class="px-4 py-2 border">Dr. K. Subhramanyam</td>
+            </tr>
+            <tr>
+                <td class="px-4 py-2 border">Principal College of Engineering</td>
+                <td class="px-4 py-2 border">Dr. A. Ramakrishna</td>
+            </tr>
+            <tr>
+                <td class="px-4 py-2 border">Principal KLH, Aziz Nagar</td>
+                <td class="px-4 py-2 border">Dr. L. Koteswara Rao</td>
+            </tr>
+            <tr>
+                <td class="px-4 py-2 border">Academic Director, KLBS</td>
+                <td class="px-4 py-2 border">Dr. Radhakrishna</td>
+            </tr>
+            <tr>
+                <td class="px-4 py-2 border">Principal College of Pharmacy</td>
+                <td class="px-4 py-2 border">Dr. G. Chakravarthy</td>
+            </tr>
+            <tr>
+                <td class="px-4 py-2 border">Principal College of Law</td>
+                <td class="px-4 py-2 border">Dr. I. Pavan Kumar</td>
+            </tr>
+            <tr>
+                <td class="px-4 py-2 border">Principal, ASC</td>
+                <td class="px-4 py-2 border">Dr. I Govardhini</td>
+            </tr>
+            <tr>
+                <td class="px-4 py-2 border">Vice Principal, College of Engineering & HOD ECE</td>
+                <td class="px-4 py-2 border">Dr. M. Suman</td>
+            </tr>
+            <tr>
+                <td class="px-4 py-2 border">Co-ordinator, FED</td>
+                <td class="px-4 py-2 border">Dr. M. S.G. Prasad</td>
+            </tr>
+
+
+        </tbody>
+    </table>
+</div>
+</section>
+ <!-- ====== Team Section End -->    <!-- ====== Team Section End -->
+ <!-- ====== Team Section End -->
+  
+</div>
+
+<script>
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+        var navbar = document.getElementById('navbar-default');
+        navbar.classList.toggle('hidden');
+        navbar.classList.toggle('block');
+    });
+    // Wait for the page to load
+
+  window.addEventListener('load', function () {
+    console.log("Page loaded"); // Check if this message appears in the browser's console
+    var preloader = document.querySelector('.preloader');
+    setTimeout(function() {
+      preloader.style.display = 'none'; // Hide the preloader
+    }, 1000); // Set the timeout to 1000 milliseconds (1 second)
+  });
+  
+  
+</script>
+
+</body>
+</html>
